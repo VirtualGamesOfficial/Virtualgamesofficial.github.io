@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Editor</title>
+    <link rel="stylesheet" href="modern-ui.css"> <!-- Link to the updated CSS -->
+</head>
+<body>
+    <header class="app-header">
+        <h1>Code Editor</h1>
+        <nav>
+            <button onclick="downloadCode()">Download</button>
+            <button onclick="loadCode()">Load</button>
+            <a href="https://daansites.github.io/index.html" class="home-link">Home</a>
+        </nav>
+    </header>
+
+    <main class="editor-layout">
+        <section class="editor-container">
+            <textarea id="editor" placeholder="Write your HTML code here..."></textarea>
+        </section>
+        <section class="preview-container">
+            <div class="preview-viewport">
+                <iframe id="preview" sandbox="allow-same-origin allow-scripts"></iframe>
+            </div>
+        </section>
+    </main>
+
+    <script src="code-editor.js"></script> <!-- Link to your JavaScript file -->
+</body>
+</html>

@@ -1,0 +1,112 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.7)), 
+    url('Images/BG.jpg'); /* Fade in at the top */
+    background-size: cover; /* Ensures the image covers the viewport without tiling */
+    background-repeat: no-repeat; /* Prevents tiling */
+    background-position: center; /* Centers the image */
+    backdrop-filter: blur(2px);
+    color: #ffffff;
+    background-color: #000000;
+}
+
+html, body {margin: 0; height: 100%; overflow: hidden}
+
+/* Header */
+.app-header {
+    background: rgba(30, 30, 30, 0.2); /* Slight transparency */
+    backdrop-filter: blur(10px); /* Adds blur effect */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid rgba(255, 255, 255, 1); /* Subtle border */
+}
+
+.app-header h1 {
+    color: rgb(0, 200, 255);
+    font-size: 1.5rem;
+}
+
+button, .home-link {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    background: rgba(0, 200, 255, 0.8);
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+button:hover, .home-link:hover {
+    background: rgba(0, 200, 255, 0.8);
+    box-shadow: 0px 0px 15px rgba(0, 90, 158, 0.8);
+}
+
+/* Main Layout */
+.editor-layout {
+    display: flex;
+    height: calc(100vh - 68px); /* Adjust height for header */
+}
+
+.editor-container {
+    flex: 1;
+    padding: 20px;
+    background: rgba(30, 30, 30, 0.1);
+    backdrop-filter: blur(5px); /* Adds blur effect */
+    border-right: 2px solid rgba(255, 255, 255, 0.4);
+}
+
+#editor {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: rgba(20, 20, 20, 0.2); /* Slight transparency */
+    color: #FFF;
+    font-family: 'Courier New', monospace;
+    font-size: 1rem;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Preview Section */
+.preview-container {
+    flex: 1;
+    padding: 20px;
+    background: rgba(30, 30, 30, 0.2);
+    backdrop-filter: blur(5px); /* Adds blur effect */
+}
+
+.preview-header h2 {
+    text-align: center;
+    color: #76C7C0;
+}
+
+.preview-viewport {
+    border: 2px solid rgba(0, 200, 255, 0.8); /* Transparent border */
+    width: 100%;
+    height: calc(100% - 40px); /* Deduct header height */
+    background: rgba(18, 18, 18, 0.8); /* Slight transparency */
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.preview-viewport iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .editor-layout {
+        flex-direction: column;
+    }
+
+    .editor-container, .preview-container {
+        height: 50%;
+    }
+}
