@@ -3,7 +3,7 @@ body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.7)), 
-    url('Images/BG.jpg'); /* Fade in at the top */
+    url('BG.jpg'); /* Fade in at the top */
     background-size: cover; /* Ensures the image covers the viewport without tiling */
     background-repeat: no-repeat; /* Prevents tiling */
     background-position: center; /* Centers the image */
